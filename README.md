@@ -77,6 +77,3 @@
 | `docker image prune` | Elimina imágenes sin usar. |
 
 ---
-
-### 🚀 Espero que esta lista te ayude a gestionar Docker de manera eficiente. 💪
-
