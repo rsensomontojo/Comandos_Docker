@@ -3,7 +3,7 @@
 ## 📉 Información básica de Docker
 | Comando | Descripción |
 |---------|------------|
-| `docker version` | Muestra la versión de Docker instalada. |
+| `docker --version` | Muestra la versión de Docker instalada. |
 | `docker info` | Muestra información detallada del sistema Docker. |
 | `docker system df` | Muestra el uso del disco por imágenes, contenedores y volúmenes. |
 
@@ -27,6 +27,7 @@
 | `docker ps` | Lista los contenedores en ejecución. |
 | `docker ps -a` | Lista todos los contenedores (incluidos los detenidos). |
 | `docker run -d --name <nombre> <imagen>` | Ejecuta un contenedor en segundo plano. |
+| `docker run <imagen>` | Ejecuta un contenedor de un Dockerfile. |
 | `docker stop <contenedor>` | Detiene un contenedor. |
 | `docker start <contenedor>` | Inicia un contenedor detenido. |
 | `docker restart <contenedor>` | Reinicia un contenedor. |
