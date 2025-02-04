@@ -77,3 +77,63 @@
 | `docker image prune` | Elimina imágenes sin usar. |
 
 ---
+
+
+# Comandos Básicos de Docker Compose
+
+## 1️⃣ Iniciar y Gestionar Contenedores
+
+| Comando                        | Descripción                                          |
+|---------------------------------|------------------------------------------------------|
+| `docker-compose up`             | Inicia los contenedores definidos en `docker-compose.yml`. |
+| `docker-compose up -d`          | Inicia los contenedores en **segundo plano** (modo desatendido). |
+| `docker-compose down`           | Detiene y elimina los contenedores, pero mantiene volúmenes y redes. |
+| `docker-compose down -v`        | Detiene y elimina contenedores **y los volúmenes asociados**. |
+| `docker-compose restart`        | Reinicia todos los contenedores.                    |
+| `docker-compose restart <servicio>` | Reinicia un servicio específico.                    |
+
+---
+
+## 2️⃣ Inspección y Monitoreo
+
+| Comando                        | Descripción                                          |
+|---------------------------------|------------------------------------------------------|
+| `docker-compose ps`             | Lista los contenedores en ejecución.                 |
+| `docker-compose logs`           | Muestra los logs de todos los servicios.             |
+| `docker-compose logs -f`        | Muestra logs en **tiempo real**.                     |
+| `docker-compose logs <servicio>`| Muestra los logs de un servicio específico.          |
+| `docker-compose top`            | Muestra los procesos en ejecución dentro de los contenedores. |
+
+---
+
+## 3️⃣ Ejecutar Comandos Dentro de Contenedores
+
+| Comando                        | Descripción                                          |
+|---------------------------------|------------------------------------------------------|
+| `docker-compose exec <servicio> <comando>` | Ejecuta un comando dentro de un contenedor.          |
+| `docker-compose exec mysql bash`| Abre una terminal dentro del contenedor `mysql`.     |
+| `docker-compose exec mysql mysql -u usuario -p` | Accede a MySQL dentro del contenedor.                |
+
+---
+
+## 4️⃣ Construcción y Gestión de Imágenes
+
+| Comando                        | Descripción                                          |
+|---------------------------------|------------------------------------------------------|
+| `docker-compose build`          | Construye las imágenes definidas en `docker-compose.yml`. |
+| `docker-compose build --no-cache`| Fuerza la reconstrucción sin usar caché.              |
+| `docker-compose down --rmi all` | Elimina contenedores **y sus imágenes asociadas**.   |
+
+---
+
+## 5️⃣ Eliminación y Limpieza
+
+| Comando                        | Descripción                                          |
+|---------------------------------|------------------------------------------------------|
+| `docker-compose rm`             | Elimina los contenedores sin afectar los volúmenes.  |
+| `docker-compose down -v`        | Elimina los contenedores **y volúmenes**.            |
+
+---
+
+### 📌 **¿Necesitas más detalles o algún ejemplo adicional?**
+
